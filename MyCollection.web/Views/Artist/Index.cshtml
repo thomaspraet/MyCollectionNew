@@ -1,0 +1,38 @@
+﻿@model List<Artist>
+
+<br />
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Artist" asp-action="Create" class="btn btn-success">
+            Add new artist
+            </a>
+        </div>
+    </div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Artist First Name
+            </th>
+            <th>
+                Artist Last Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.OrderBy(u => u.LastName))
+        {
+            <tr>
+                <td>@obj.FirstName</td>
+                <td>@obj.LastName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

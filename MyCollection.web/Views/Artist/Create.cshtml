@@ -1,0 +1,27 @@
+﻿@model Artist
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary">Create Artist</h4>
+        </div>
+        <div class="mb-3 row">
+            <label>First Name</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row">
+            <label>Last Name</label>
+            <input type="text" class="form-control" />
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-success form-control">Add Artist</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Artist" asp-action="Index" class="btn btn-outline-secondary form-control">Back to list</a>
+            </div>
+        </div>
+    </div>
+</form>
